@@ -1,20 +1,20 @@
 /*!
-  kolorfield v0.2.0 (https://kolorfield.js.org)
-  by Kodie Grantham (https://kodieg.com)
+  colortap v0.3.0 (https://colortap.js.org)
+  by Five Fifteen (https://fivefifteen.com)
 */
 
-const kolorfield = () => {
-  const elements = document.getElementsByClassName('kolorfield')
+const colortap = () => {
+  const elements = document.getElementsByClassName('colortap')
 
   for (let i = 0; i < elements.length; i++) {
     (function (element) {
       const input = element.querySelector('input[type="color"]')
 
       if (input) {
-        const openElements = element.getElementsByClassName('kolorfield-open')
-        const valueInputs = element.getElementsByClassName('kolorfield-input')
-        const valueElements = element.getElementsByClassName('kolorfield-value')
-        const stylePropElements = element.querySelectorAll('[data-kolorfield-style-prop]')
+        const openElements = element.getElementsByClassName('colortap-open')
+        const valueInputs = element.getElementsByClassName('colortap-input')
+        const valueElements = element.getElementsByClassName('colortap-value')
+        const stylePropElements = element.querySelectorAll('[data-colortap-style-prop]')
 
         element.open = function () {
           input.focus()
@@ -34,7 +34,7 @@ const kolorfield = () => {
 
           input.value = value
 
-          kolorfield.triggerEvent('change', input)
+          colortap.triggerEvent('change', input)
         }
 
         element.get = function () {
@@ -60,17 +60,17 @@ const kolorfield = () => {
             const valueInput = valueInputs[v]
 
             valueInput.addEventListener('change', function (e) {
-              if (!e.kolorfieldTriggered) {
+              if (!e.colortapTriggered) {
                 element.set(valueInput.value)
               }
             }, false)
 
             valueInput.addEventListener('input', function (e) {
-              if (valueInput.kolorfieldTimer) {
-                clearTimeout(valueInput.kolorfieldTimer)
+              if (valueInput.colortapTimer) {
+                clearTimeout(valueInput.colortapTimer)
               }
 
-              valueInput.kolorfieldTimer = kolorfield.triggerEvent('change', valueInput, {}, 1000)
+              valueInput.colortapTimer = colortap.triggerEvent('change', valueInput, {}, 1000)
             })
           }
         }
@@ -99,7 +99,7 @@ const kolorfield = () => {
           if (stylePropElements.length) {
             for (let c = 0; c < stylePropElements.length; c++) {
               const stylePropElement = stylePropElements[c]
-              const styleProps = stylePropElement.getAttribute('data-kolorfield-style-prop').split(',')
+              const styleProps = stylePropElement.getAttribute('data-colortap-style-prop').split(',')
 
               for (let k = 0; k < styleProps.length; k++) {
                 stylePropElement.style[styleProps[k]] = input.value
@@ -108,9 +108,9 @@ const kolorfield = () => {
           }
         })
 
-        kolorfield.triggerEvent('change', input)
+        colortap.triggerEvent('change', input)
       } else {
-        console.warn(element, 'An color input field is required for each kolorfield instance.')
+        console.warn(element, 'An color input field is required for each colortap instance.')
       }
     })(elements[i])
   }
@@ -118,7 +118,7 @@ const kolorfield = () => {
   return elements
 }
 
-kolorfield.triggerEvent = (type, element, data, delay) => {
+colortap.triggerEvent = (type, element, data, delay) => {
   return setTimeout(function () {
     const e = new Event(type, { bubbles: true })
 
@@ -132,4 +132,4 @@ kolorfield.triggerEvent = (type, element, data, delay) => {
   }, delay || 1)
 }
 
-export default kolorfield
+export default colortap

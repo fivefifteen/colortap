@@ -1,24 +1,24 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.kolorfield = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.colortap = factory());
 })(this, (function () { 'use strict';
 
   /*!
-    kolorfield v0.2.0 (https://kolorfield.js.org)
-    by Kodie Grantham (https://kodieg.com)
+    colortap v0.3.0 (https://colortap.js.org)
+    by Five Fifteen (https://fivefifteen.com)
   */
 
-  var kolorfield = function kolorfield() {
-    var elements = document.getElementsByClassName('kolorfield');
+  var _colortap = function colortap() {
+    var elements = document.getElementsByClassName('colortap');
     for (var i = 0; i < elements.length; i++) {
       (function (element) {
         var input = element.querySelector('input[type="color"]');
         if (input) {
-          var openElements = element.getElementsByClassName('kolorfield-open');
-          var valueInputs = element.getElementsByClassName('kolorfield-input');
-          var valueElements = element.getElementsByClassName('kolorfield-value');
-          var stylePropElements = element.querySelectorAll('[data-kolorfield-style-prop]');
+          var openElements = element.getElementsByClassName('colortap-open');
+          var valueInputs = element.getElementsByClassName('colortap-input');
+          var valueElements = element.getElementsByClassName('colortap-value');
+          var stylePropElements = element.querySelectorAll('[data-colortap-style-prop]');
           element.open = function () {
             input.focus();
             input.click();
@@ -32,7 +32,7 @@
               value = '#' + value[1] + value[1] + value[2] + value[2] + value[3] + value[3];
             }
             input.value = value;
-            kolorfield.triggerEvent('change', input);
+            _colortap.triggerEvent('change', input);
           };
           element.get = function () {
             return input.value;
@@ -52,15 +52,15 @@
             var _loop = function _loop() {
               var valueInput = valueInputs[v];
               valueInput.addEventListener('change', function (e) {
-                if (!e.kolorfieldTriggered) {
+                if (!e.colortapTriggered) {
                   element.set(valueInput.value);
                 }
               }, false);
               valueInput.addEventListener('input', function (e) {
-                if (valueInput.kolorfieldTimer) {
-                  clearTimeout(valueInput.kolorfieldTimer);
+                if (valueInput.colortapTimer) {
+                  clearTimeout(valueInput.colortapTimer);
                 }
-                valueInput.kolorfieldTimer = kolorfield.triggerEvent('change', valueInput, {}, 1000);
+                valueInput.colortapTimer = _colortap.triggerEvent('change', valueInput, {}, 1000);
               });
             };
             for (var v = 0; v < valueInputs.length; v++) {
@@ -88,22 +88,22 @@
             if (stylePropElements.length) {
               for (var c = 0; c < stylePropElements.length; c++) {
                 var stylePropElement = stylePropElements[c];
-                var styleProps = stylePropElement.getAttribute('data-kolorfield-style-prop').split(',');
+                var styleProps = stylePropElement.getAttribute('data-colortap-style-prop').split(',');
                 for (var k = 0; k < styleProps.length; k++) {
                   stylePropElement.style[styleProps[k]] = input.value;
                 }
               }
             }
           });
-          kolorfield.triggerEvent('change', input);
+          _colortap.triggerEvent('change', input);
         } else {
-          console.warn(element, 'An color input field is required for each kolorfield instance.');
+          console.warn(element, 'An color input field is required for each colortap instance.');
         }
       })(elements[i]);
     }
     return elements;
   };
-  kolorfield.triggerEvent = function (type, element, data, delay) {
+  _colortap.triggerEvent = function (type, element, data, delay) {
     return setTimeout(function () {
       var e = new Event(type, {
         bubbles: true
@@ -117,7 +117,7 @@
     }, delay || 1);
   };
 
-  return kolorfield;
+  return _colortap;
 
 }));
-//# sourceMappingURL=kolorfield.js.map
+//# sourceMappingURL=colortap.js.map

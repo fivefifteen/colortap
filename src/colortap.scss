@@ -1,9 +1,9 @@
 /*!
-  kolorfield v0.2.0 (https://kolorfield.js.org)
-  by Kodie Grantham (https://kodieg.com)
+  colortap v0.3.0 (https://colortap.js.org)
+  by Five Fifteen (https://fivefifteen.com)
 */
 
-.kolorfield {
+.colortap {
   input[type="color"] {
     height: 0.1px;
     opacity: 0;
@@ -13,7 +13,7 @@
     z-index: -1;
   }
   
-  .kolorfield-open {
+  .colortap-open {
     cursor: pointer;
   }
 }

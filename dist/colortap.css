@@ -1,0 +1,17 @@
+/*!
+  colortap v0.3.0 (https://colortap.js.org)
+  by Five Fifteen (https://fivefifteen.com)
+*/
+.colortap input[type=color] {
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  z-index: -1;
+}
+.colortap .colortap-open {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=colortap.css.map */
