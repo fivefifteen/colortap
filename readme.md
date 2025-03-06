@@ -1,12 +1,25 @@
-# colortap
+<div align="center">
 
-[![npm package version](https://img.shields.io/npm/v/colortap.svg?style=flat-square)](https://www.npmjs.com/package/colortap)
-[![Travis build status](https://img.shields.io/travis/com/fivefifteen/colortap.svg?style=flat-square)](https://travis-ci.com/fivefifteen/colortap)
-[![npm package downloads](https://img.shields.io/npm/dt/colortap.svg?style=flat-square)](https://www.npmjs.com/package/colortap)
-[![code style](https://img.shields.io/badge/code_style-standard-yellow.svg?style=flat-square)](https://github.com/standard/standard)
-[![license](https://img.shields.io/github/license/fivefifteen/colortap.svg?style=flat-square)](license.md)
+  <a href="https://github.com/fivefifteen/colortap">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/colortap-white.png">
+      <img src="./assets/colortap.png" alt="ColorTap">
+    </picture>
+  </a>
 
-A tiny, dependency-free, color input field helper that utilizes the native color picker.
+  # ColorTap
+
+  A tiny, dependency-free, color input field helper that utilizes the native color picker.
+
+  [![npm package version](https://img.shields.io/npm/v/colortap.svg?style=flat-square)](https://www.npmjs.com/package/colortap)
+  [![npm package downloads](https://img.shields.io/npm/dt/colortap.svg?style=flat-square)](https://www.npmjs.com/package/colortap)
+  [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fivefifteen/colortap?style=flat-square)](https://github.com/fivefifteen/colortap)
+  [![code style](https://img.shields.io/badge/code_style-standard-yellow.svg?style=flat-square)](https://github.com/standard/standard)
+  [![license](https://img.shields.io/github/license/fivefifteen/colortap.svg?style=flat-square)](license.md)
+
+  <a href="https://fivefifteen.com" target="_blank"><img src="./assets/fivefifteen.png" /><br /><b>A Five Fifteen Project</b></a>
+
+</div>
 
 
 ## Demo
@@ -32,8 +45,8 @@ Visit https://colortap.js.org
 Place the following HTML in your page's head element (check to make sure the version in the URLs are the version you want):
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fivefifteen/colortap@0.0.2/dist/colortap.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fivefifteen/colortap@0.0.2/dist/colortap.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fivefifteen/colortap@0.3/dist/colortap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fivefifteen/colortap@0.3/dist/colortap.min.css" />
 ```
 
 
@@ -52,10 +65,10 @@ const colortap = require('colortap')
 ```
 
 
-### [GPM](https://github.com/itsahappymedium/gpm)
+### [Fetcher](https://github.com/fivefifteen/fetcher)
 
 ```
-gpm install fivefifteen/colortap --save
+fetcher install fivefifteen/colortap --save
 ```
 
 
@@ -126,17 +139,13 @@ color.addEventListener('change', function () {
 
 ## Related
 
- - [filebokz](https://github.com/fivefifteen/filebokz) - A tiny, dependency-free, highly customizable and configurable, easy to use file input with some pretty sweet features.
+ - [FileBokz](https://github.com/fivefifteen/filebokz) - A tiny, dependency-free, highly customizable and configurable, easy to use file input with some pretty sweet features.
 
- - [growfield](https://github.com/fivefifteen/growfield) - A tiny, dependency-free JavaScript module for making textarea elements grow with their content.
+ - [GrowField](https://github.com/fivefifteen/growfield) - A tiny, dependency-free JavaScript module for making textarea elements grow with their content.
 
- - [hashjump](https://github.com/fivefifteen/hashjump) - A tiny, dependency-free JavaScript module for handling anchor links and scrolling elements into view.
+ - [HashJump](https://github.com/fivefifteen/hashjump) - A tiny, dependency-free JavaScript module for handling anchor links and scrolling elements into view.
 
- - [kloner](https://github.com/fivefifteen/kloner) - A tiny, dependency-free JavaScript module for cloning/repeating elements.
-
- - [minitaur](https://github.com/fivefifteen/minitaur) - The ultimate, dependency-free, easy to use, JavaScript plugin for creating and managing modals.
-
- - [peekfield](https://github.com/fivefifteen/peekfield) - A dependency-free, easy to use, JavaScript plugin for hiding and showing fields.
+ - [Kloner](https://github.com/fivefifteen/kloner) - A tiny, dependency-free JavaScript module for cloning/repeating elements.
 
 
 ## License

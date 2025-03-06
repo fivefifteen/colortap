@@ -1,30 +1,72 @@
 <!doctype html>
 <html>
   <head>
-    <title>colortap</title>
+    <title>ColorTap — A tiny, dependency-free, color input field helper that utilizes the native color picker.</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="A tiny, dependency-free, color input field helper that utilizes the native color picker." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ColorTap — A tiny, dependency-free, color input field helper that utilizes the native color picker." />
+    <meta property="og:description" content="A tiny, dependency-free, color input field helper that utilizes the native color picker." />
+    <meta property="og:url" content="https://colortap.js.org/" />
+    <meta property="og:site_name" content="ColorTap" />
+    <link rel="canonical" href="https://colortap.js.org/" />
+    <link rel="icon" href="./assets/colortap.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="./assets/colortap-white.png" media="(prefers-color-scheme: dark)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
     <link rel="stylesheet" href="dist/colortap.min.css" />
     <style type="text/css">
-      body {
-        background-color: #e9ecef;
-        --color: #5185b3;
+      :root {
+        --color: #000;
+      }
 
+      html {
+        scrollbar-color: #000 #fff;
+        scrollbar-color: var(--color) #fff;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: #fff;
       }
 
       a {
-        color: #5185b3;
+        color: #000;
         color: var(--color);
         text-decoration: underline;
       }
 
-      .github-fork-ribbon:before {
-        background-color: #5185b3;
+      .header, .footer {
+        background-color: #000;
         background-color: var(--color);
+        color: #fff;
+        text-align: center;
       }
 
-      footer {
+      
+      .header .container > *, .footer .container > * {
+        margin: 1rem 0;
+      }
+
+      .header a, .footer a {
+        color: #fff;
+      }
+
+      .footer {
         padding: 4rem 0;
+        text-align: center;
+      }
+
+      .github-fork-ribbon:before {
+        background-color: #000;
+        background-color: var(--color);
       }
 
       .container {
@@ -35,6 +77,52 @@
         background-color: #ffffff;
         padding: 4rem 0;
       }
+
+      .github-link {
+        font-size: 50px;
+      }
+
+      .fivefifteen-link {
+        margin-top: 50px !important;
+      }
+
+      .fivefifteen-footer-link img {
+        width: 150px;
+      }
+
+      .btns {
+        text-align: center;
+      }
+
+      .btn-custom {
+        color: #fff;
+        background-color: #000;
+        background-color: var(--color);
+        border-color: #000;
+        border-color: var(--color);
+        text-decoration: none;
+      }
+
+      .btn-custom:hover {
+        color: #fff;
+      }
+
+      .colortap-value {
+        color: #fff;
+      }
+
+      .colortap-input {
+        color: #000;
+        color: var(--color);
+      }
+
+      .npm-install {
+        color: #000;
+        color: var(--color);
+        display: block;
+        font-size: 18px;
+        margin-top: 50px;
+      }
     </style>
     <script type="text/javascript" src="dist/colortap.min.js"></script>
     <script type="text/javascript">
@@ -42,7 +130,7 @@
         var fields = colortap()
 
         fields[0].addEventListener('change', function () {
-          document.body.style.setProperty('--color', event.target.value)
+          document.documentElement.style.setProperty('--color', event.target.value)
         })
       })
 
@@ -60,31 +148,40 @@
   <body>
     <a class="github-fork-ribbon" href="https://github.com/fivefifteen/colortap" data-ribbon="Check me out on GitHub" title="Check me out on GitHub">Check me out on GitHub</a>
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="header jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">colortap</h1>
+        <img src="./assets/colortap-white.png" />
+        <h1 class="display-4">ColorTap</h1>
         <p class="lead">A tiny, dependency-free, color input field helper that utilizes the native color picker.</p>
-        <p><a href="https://github.com/fivefifteen/colortap" target="_blank">https://github.com/fivefifteen/colortap</a></p>
+        <p class="fivefifteen-link"><a href="https://fivefifteen.com" target="_blank"><img src="./assets/fivefifteen.png" /><br /><b>A Five Fifteen Project</b></a></p>
       </div>
+    </div>
+
+    <div class="btns container">
+      <a href="https://github.com/fivefifteen/colortap/archive/refs/heads/main.zip" class="btn btn-lg btn-custom" role="button">Download</a>
+      <a href="https://github.com/fivefifteen/colortap" class="btn btn-lg btn-custom" target="_blank" role="button">GitHub/Documentation</a>
+      <code class="npm-install">npm install colortap --save</code>
     </div>
 
     <div id="main">
       <div class="container">
         <div class="colortap">
-          <input type="color" id="main-color" value="#5185b3">
+          <input type="color" id="main-color" value="#000">
           <button type="button" class="btn btn-light colortap-open colortap-value" data-colortap-style-prop="background-color"></button>
           <input type="text" class="colortap-input" />
-          <button onClick="opencolortap()">Open</button>
-          <button onClick="setColor('#ff0000')">Set to Red</button>
-          <button onClick="setColor('#00ff00')">Set to Green</button>
-          <button onClick="setColor('#0000ff')">Set to Blue</button>
+          <button class="btn btn-custom" onClick="opencolortap()">Open</button>
+          <button class="btn btn-custom" onClick="setColor('#ff0000')">Set to Red</button>
+          <button class="btn btn-custom" onClick="setColor('#00ff00')">Set to Green</button>
+          <button class="btn btn-custom" onClick="setColor('#0000ff')">Set to Blue</button>
         </div>
       </div>
     </div>
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">&copy; <a href="https://fivefifteen.com" target="_blank">Five Fifteen</a></span>
+        <p class="github-link"><a href="https://github.com/fivefifteen/colortap" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+        <p class="fivefifteen-footer-link"><a href="https://fivefifteen.com" target="_blank"><img src="./assets/fivefifteen.png" /></a></p>
+        <p class="copyright">&copy; <a href="https://fivefifteen.com" target="_blank">Five Fifteen</a></p>
       </div>
     </footer>
   </body>
