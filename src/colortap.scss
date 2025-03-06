@@ -1,5 +1,5 @@
 /*!
-  colortap v0.2.0 (https://colortap.js.org)
+  colortap v0.3.0 (https://colortap.js.org)
   by Five Fifteen (https://fivefifteen.com)
 */
 

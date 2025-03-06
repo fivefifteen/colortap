@@ -1,6 +1,6 @@
 {
   "name": "colortap",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A tiny, dependency-free, color input field helper that utilizes the native color picker.",
   "type": "module",
   "keywords": [
