@@ -42,7 +42,7 @@ Visit https://colortap.js.org
 
 ### CDN (Courtesy of [jsDelivr](https://jsdelivr.com))
 
-Place the following HTML in your page's head element (check to make sure the version in the URLs are the version you want):
+Place the following HTML in your page's head element (check to make sure the version in the URLs is the version you want):
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fivefifteen/colortap@0.3/dist/colortap.min.js"></script>
@@ -94,7 +94,7 @@ bower install fivefifteen/colortap --save
 
 ### The `colortap` Function
 
-Initiates colortap on any element that has the `colortap` class. This should be a container around your color input.
+Initiates ColorTap on any element that has the `colortap` class. This should be a container around your color input.
 
 
 #### Example
